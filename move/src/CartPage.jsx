@@ -1,26 +1,25 @@
 
 import React, { useEffect, useState } from "react";
-import { useNavigate } from "react-router-dom"; // useNavigate import karo
+import { useNavigate } from "react-router-dom"; 
 import "./cartPage.css";
 
 const CartPage = () => {
   const [cartItems, setCartItems] = useState([]);
-  const navigate = useNavigate(); // navigate hook initialize karo
+  const navigate = useNavigate();
 
-  // Page load hote hi localStorage se items le lo
+  
   useEffect(() => {
     const items = JSON.parse(localStorage.getItem("cartItems")) || [];
     setCartItems(items);
   }, []);
 
-  // Item delete karne ka function
   const removeFromCart = (index) => {
     const updatedCart = cartItems.filter((_, i) => i !== index);
     setCartItems(updatedCart);
     localStorage.setItem("cartItems", JSON.stringify(updatedCart));
   };
 
-  // Total price calculate karo
+  
   const totalPrice = cartItems.reduce((acc, item) => acc + item.price, 0);
 
   return (
