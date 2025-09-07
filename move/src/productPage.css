@@ -1,0 +1,48 @@
+
+/* Container for the whole product page */
+.box {
+  max-width: 800px;       /* Page ka max width */
+  margin: 20px auto;      /* Center alignment with top/bottom margin */
+  padding: 10px;          /* Inner spacing */
+  font-family: Arial, sans-serif; /* Font style */
+}
+
+/* Heading of the product page */
+.box h2 {
+  text-align: center;     /* Heading center me */
+  color: #333;            /* Dark grey color */
+}
+
+/* The list that contains all product items */
+.box1 {
+  list-style: none;       /* No bullets for list items */
+  padding: 0;             /* Remove default padding */
+  display: flex;          /* Flex layout for horizontal alignment */
+  flex-wrap: wrap;        /* Wrap items to next line if overflow */
+  gap: 20px;              /* Gap between products */
+  justify-content: center; /* Center items horizontally */
+}
+
+/* Each product card / list item */
+.box1 li {
+  border: 1px solid #ddd;       /* Light grey border */
+  border-radius: 8px;           /* Rounded corners */
+  padding: 10px;                /* Inner spacing */
+  width: 200px;                 /* Fixed width for each product */
+  text-align: center;           /* Center text */
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1); 
+   transition: transform 0.3s ease;
+}   
+   .box1 li:hover {
+  transform: translateY(-9px);          /* Card slightly moves up */
+
+   /* Shadow becomes deeper *//* Subtle shadow for card */
+}
+
+/* Product image inside each card */
+.box3 {
+  width: 100%;                  /* Image fills card width */
+  height: 150px;                /* Fixed height */
+  object-fit: cover;            /* Cover card nicely without stretching */
+  border-radius: 5px;           /* Slightly rounded corners */
+}
